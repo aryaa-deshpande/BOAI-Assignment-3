@@ -60,9 +60,9 @@ class TextPreprocessor:
         text = text.lower()
         
         # Standardize quotes and dashes
-        text = re.sub(r'[""]', '"', text)
-        text = re.sub(r'['']', "'", text)
-        text = re.sub(r'—|–', '-', text)
+        text = re.sub(r'[“”"]', '"', text)   # normalize all double quotes to "
+        text = re.sub(r"[’‘']", "'", text)   # normalize all single quotes to '
+        text = re.sub(r'[—–]', '-', text)    # normalize long dashes to -
         
         if preserve_sentences:
             # Keep sentence endings but remove other punctuation
