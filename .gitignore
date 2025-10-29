@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
-*.json
+
 *.pdf
 *.DS_Store
 data/processed/
